@@ -38,7 +38,7 @@ jobs:
         uses: actions/setup-go@v2
       
       - name: Build Binary
-        run: go build -o dist/mikrotik-exporter .
+        run: go build -o dist/mikrotik-exporter_linux_amd64 .
 
       # Login against a Docker registry except on PR
       # https://github.com/docker/login-action
