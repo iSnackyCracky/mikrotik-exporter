@@ -33,6 +33,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+      
+      - name: Setup Go
+        uses: actions/setup-go@v2
+      
+      - name: Build Binary
+        run: go build -o dist/mikrotik-exporter .
 
       # Login against a Docker registry except on PR
       # https://github.com/docker/login-action
